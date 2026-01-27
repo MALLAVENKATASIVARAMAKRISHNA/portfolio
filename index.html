@@ -6,6 +6,10 @@
   <title>Venkata Siva Rama Krishna Malla | Portfolio</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -14,10 +18,23 @@
       line-height: 1.6;
     }
 
+    /* ===== Animation Base ===== */
+    .animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== Header ===== */
     header {
       background: #0f172a;
       color: #ffffff;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
@@ -37,7 +54,7 @@
 
     header p {
       font-size: 1.1rem;
-      max-width: 780px;
+      max-width: 800px;
       margin: 15px auto 30px;
       color: #cbd5f5;
     }
@@ -51,11 +68,18 @@
       border-radius: 6px;
       font-weight: bold;
       display: inline-block;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
+    .btn-group a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    /* ===== Sections ===== */
     section {
       max-width: 1000px;
-      margin: 50px auto;
+      margin: 70px auto;
       padding: 0 20px;
     }
 
@@ -67,6 +91,7 @@
       padding-bottom: 5px;
     }
 
+    /* ===== Cards ===== */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -79,6 +104,12 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
 
     .card h3 {
@@ -90,12 +121,19 @@
       padding-left: 18px;
     }
 
+    /* ===== Projects ===== */
     .project {
       background: #ffffff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       margin-bottom: 25px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
 
     .project a {
@@ -104,6 +142,7 @@
       font-weight: bold;
     }
 
+    /* ===== Education ===== */
     .education {
       background: #ffffff;
       padding: 20px;
@@ -112,6 +151,7 @@
       max-width: 700px;
     }
 
+    /* ===== Footer ===== */
     footer {
       background: #0f172a;
       color: #cbd5f5;
@@ -131,7 +171,7 @@
 <body>
 
   <!-- HERO -->
-  <header>
+  <header class="animate">
     <img src="assets/rk.jpeg" alt="Rama Krishna" class="profile-pic"/>
 
     <h1>Venkata Siva Rama Krishna Malla</h1>
@@ -150,18 +190,92 @@
   </header>
 
   <!-- ABOUT -->
-  <section>
+  <section class="animate">
     <h2>About Me</h2>
     <p>
       I am a backend-heavy full-stack developer with a strong foundation in systems,
       networking, and execution-level debugging. My background in Mechanical Engineering
-      trained me in disciplined problem-solving and system-level thinking, which I now
-      apply to building reliable backend services and clean, functional frontend interfaces.
+      trained me in disciplined problem-solving and system-level thinking.
     </p>
   </section>
 
+  <!-- CAPABILITIES -->
+  <section class="animate">
+    <h2>Core Capabilities</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Backend & Execution</h3>
+        <ul>
+          <li>Python & FastAPI</li>
+          <li>REST API design</li>
+          <li>Execution-level debugging</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Networking & Systems</h3>
+        <ul>
+          <li>HTTP & TCP fundamentals</li>
+          <li>SSH & port forwarding</li>
+          <li>Linux-based workflows</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data & Persistence</h3>
+        <ul>
+          <li>SQLite & MySQL</li>
+          <li>SQL & ORM modeling</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Frontend & Tools</h3>
+        <ul>
+          <li>HTML, CSS, DOM</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="animate">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Home Bites – Food Ordering System</h3>
+      <ul>
+        <li>Backend-first system using FastAPI</li>
+        <li>Order lifecycle management</li>
+      </ul>
+      <p>
+        🔗 <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA/home_bites" target="_blank">GitHub</a><br/>
+        🚀 <a href="#">Live Demo (Coming Soon)</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Student Profile Website Generator</h3>
+      <ul>
+        <li>Python automation project</li>
+        <li>Dynamic website generation</li>
+      </ul>
+      <p>
+        🔗 <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA/profile_website" target="_blank">GitHub</a><br/>
+        🚀 <a href="https://aikaryashala.com/vidyardhi/AIK073361/" target="_blank">Live Website</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="animate">
+    <h2>Education</h2>
+    <div class="education">
+      <strong>Bachelor of Technology – Mechanical Engineering</strong><br/>
+      GMR Institute of Technology
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer>
+  <footer class="animate">
     <p>
       © 2026 Venkata Siva Rama Krishna Malla<br/>
       <a href="mailto:2003ramakrishan@zohomail.in">
@@ -169,6 +283,21 @@
       </a>
     </p>
   </footer>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+  <script>
+    const animatedElements = document.querySelectorAll('.animate');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
