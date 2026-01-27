@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Venkata Siva Rama Krishna Malla | Portfolio</title>
+
   <style>
     body {
       margin: 0;
@@ -27,7 +28,7 @@
 
     header p {
       font-size: 1.1rem;
-      max-width: 700px;
+      max-width: 750px;
       margin: 15px auto 30px;
       color: #cbd5f5;
     }
@@ -57,10 +58,6 @@
       padding-bottom: 5px;
     }
 
-    .about p {
-      max-width: 850px;
-    }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -88,6 +85,14 @@
       margin-bottom: 25px;
     }
 
+    .education {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 700px;
+    }
+
     footer {
       background: #0f172a;
       color: #cbd5f5;
@@ -103,16 +108,19 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- HERO -->
   <header>
     <h1>Venkata Siva Rama Krishna Malla</h1>
     <p>
-      Execution-Aware Backend Engineer | Mechanical Engineering Graduate  
-      <br/>
-      I build backend systems by understanding execution, networking, and data flow — not by guesswork.
+      <strong>Execution-Aware Backend Engineer</strong><br/>
+      Mechanical Engineering Graduate<br/><br/>
+      I build backend systems by understanding execution, networking, and data flow —
+      not by guesswork.
     </p>
+
     <div class="btn-group">
       <a href="resume.pdf" target="_blank">Resume</a>
       <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA" target="_blank">GitHub</a>
@@ -121,26 +129,26 @@
   </header>
 
   <!-- ABOUT -->
-  <section class="about">
+  <section>
     <h2>About Me</h2>
     <p>
-      I am an execution-aware engineer trained in systems programming, networking,
-      databases, and disciplined debugging practices.  
-      I focus on understanding how software behaves at runtime — across code,
-      operating system, and network layers — and use this understanding to build
-      reliable backend systems.
+      I am an execution-aware backend engineer with a foundation in Mechanical Engineering.
+      My academic background trained me in systems thinking, structured problem-solving,
+      and execution discipline — skills I now apply to building and debugging
+      reliable backend and systems-oriented software.
     </p>
   </section>
 
   <!-- CAPABILITIES -->
   <section>
     <h2>Core Capabilities</h2>
+
     <div class="grid">
       <div class="card">
         <h3>Systems & Execution</h3>
         <ul>
-          <li>C program execution pipeline</li>
-          <li>Stack frames, memory & assembly</li>
+          <li>C execution pipeline & compilation stages</li>
+          <li>Stack frames, memory & assembly reasoning</li>
           <li>LLDB & instruction-level debugging</li>
           <li>Python runtime & bytecode understanding</li>
         </ul>
@@ -171,8 +179,8 @@
         <ul>
           <li>Git & GitHub workflows</li>
           <li>Remote Linux development (SSH)</li>
-          <li>Structured GenAI-assisted learning</li>
-          <li>Debugging by observation, not guesswork</li>
+          <li>Disciplined GenAI-assisted learning</li>
+          <li>Debugging by observation</li>
         </ul>
       </div>
     </div>
@@ -185,35 +193,46 @@
     <div class="project">
       <h3>Home Bites – Food Ordering System</h3>
       <p>
-        End-to-end backend system that digitalizes a home-based food business.
-        Built REST APIs and managed complete order lifecycle.
+        Designed and developed an end-to-end backend system to digitalize
+        a home-based food business.
       </p>
       <ul>
-        <li>Designed backend flow from order placement to delivery</li>
-        <li>Implemented CRUD operations using FastAPI & SQLAlchemy</li>
-        <li>Used Pydantic for validation and Postman for testing</li>
+        <li>Built REST APIs using FastAPI</li>
+        <li>Managed complete order lifecycle</li>
+        <li>Implemented database models using SQLAlchemy</li>
+        <li>Validated requests with Pydantic and tested via Postman</li>
       </ul>
     </div>
 
     <div class="project">
       <h3>Student Profile Static Site Generator</h3>
       <p>
-        Python automation project that generates individual student portfolio websites
+        Python automation system that generates individual portfolio websites
         using a single HTML template and CSV data.
       </p>
       <ul>
-        <li>Automated folder and page generation</li>
+        <li>Automated folder and HTML generation</li>
         <li>Dynamic data injection using Python</li>
-        <li>Scalable and consistent site structure</li>
+        <li>Ensured scalability and consistency</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+    <div class="education">
+      <p>
+        <strong>Bachelor of Technology – Mechanical Engineering</strong><br/>
+        GMR Institute of Technology
+      </p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <p>
-      © 2026 Venkata Siva Rama Krishna Malla  
-      <br/>
+      © 2026 Venkata Siva Rama Krishna Malla<br/>
       <a href="mailto:2003ramakrishan@zohomail.in">2003ramakrishan@zohomail.in</a>
     </p>
   </footer>
