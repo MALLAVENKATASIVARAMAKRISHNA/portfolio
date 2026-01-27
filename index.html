@@ -16,7 +16,41 @@
       line-height: 1.6;
     }
 
-    /* ===== Startup Animation ===== */
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #0f172a;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: #cbd5f5;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a:hover { color: #ffffff; }
+
+    /* ===== STARTUP ANIMATION ===== */
     #startup {
       position: fixed;
       inset: 0;
@@ -24,39 +58,22 @@
       color: #ffffff;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
       z-index: 9999;
       animation: fadeOut 0.8s ease forwards;
-      animation-delay: 2.8s;
+      animation-delay: 3s;
     }
 
-    #startup .role {
-      font-size: clamp(1.5rem, 5vw, 2.4rem);
-      font-weight: bold;
+    #startup div {
       opacity: 0;
       animation: fadeInUp 0.8s ease forwards;
     }
 
-    #startup .name {
-      margin-top: 10px;
-      font-size: clamp(1.1rem, 4vw, 1.7rem);
-      font-weight: 600;
-      color: #e0e7ff;
-      opacity: 0;
-      animation: fadeInUp 0.8s ease forwards;
-      animation-delay: 0.4s;
-    }
-
-    #startup .tagline {
-      margin-top: 10px;
-      font-size: 1rem;
-      color: #cbd5f5;
-      opacity: 0;
-      animation: fadeInUp 0.8s ease forwards;
-      animation-delay: 0.8s;
-    }
+    #startup .role { font-size: 2rem; font-weight: bold; }
+    #startup .name { margin-top: 10px; font-size: 1.4rem; color: #e0e7ff; animation-delay: 0.4s; }
+    #startup .tagline { margin-top: 10px; color: #cbd5f5; animation-delay: 0.8s; }
 
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -67,7 +84,7 @@
       to { opacity: 0; visibility: hidden; }
     }
 
-    /* ===== Scroll Reveal ===== */
+    /* ===== SCROLL REVEAL ===== */
     .animate {
       opacity: 0;
       transform: translateY(30px);
@@ -79,11 +96,11 @@
       transform: translateY(0);
     }
 
-    /* ===== Header ===== */
+    /* ===== HERO ===== */
     header {
       background: #0f172a;
       color: #ffffff;
-      padding: 80px 20px;
+      padding: 140px 20px 80px;
       text-align: center;
     }
 
@@ -98,21 +115,13 @@
 
     header h1 {
       margin: 0;
-      font-size: clamp(1.9rem, 5vw, 2.6rem);
+      font-size: 2.6rem;
     }
 
     header p {
       max-width: 900px;
       margin: 15px auto 30px;
       color: #cbd5f5;
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-    }
-
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
     }
 
     .btn-group a {
@@ -121,25 +130,27 @@
       text-decoration: none;
       padding: 10px 18px;
       border-radius: 6px;
+      margin: 5px;
       font-weight: bold;
+      display: inline-block;
     }
 
-    /* ===== Sections ===== */
+    /* ===== SECTIONS ===== */
     section {
       max-width: 1100px;
-      margin: 70px auto;
+      margin: 80px auto;
       padding: 0 20px;
+      scroll-margin-top: 90px;
     }
 
     section h2 {
-      font-size: clamp(1.4rem, 4vw, 1.9rem);
+      font-size: 1.9rem;
       margin-bottom: 20px;
       border-bottom: 3px solid #6366f1;
       display: inline-block;
       padding-bottom: 5px;
     }
 
-    /* ===== Cards ===== */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -153,17 +164,14 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
-    ul {
-      padding-left: 18px;
-    }
+    ul { padding-left: 18px; }
 
-    /* ===== Footer ===== */
+    /* ===== FOOTER ===== */
     footer {
       background: #0f172a;
       color: #cbd5f5;
       text-align: center;
       padding: 25px 15px;
-      margin-top: 60px;
     }
 
     footer a {
@@ -176,150 +184,179 @@
 
 <body>
 
-  <!-- STARTUP -->
-  <div id="startup">
-    <div class="role">Backend-Heavy Full-Stack Developer</div>
-    <div class="name">Venkata Siva Rama Krishna Malla</div>
-    <div class="tagline">Execution-Aware Engineer</div>
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-container">
+    <div class="nav-logo">Rama Krishna</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Capabilities</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+    </div>
+  </div>
+</nav>
+
+<!-- STARTUP -->
+<div id="startup">
+  <div class="role">Backend-Heavy Full-Stack Developer</div>
+  <div class="name">Venkata Siva Rama Krishna Malla</div>
+  <div class="tagline">Execution-Aware Engineer</div>
+</div>
+
+<!-- HERO -->
+<header class="animate">
+  <img src="assets/rk.jpeg" class="profile-pic" alt="Rama Krishna"/>
+  <h1>Venkata Siva Rama Krishna Malla</h1>
+  <p>
+    <strong>Backend-Heavy Full-Stack Developer</strong><br/>
+    Execution-Aware Engineer | Mechanical Engineering Graduate<br/><br/>
+    I design and build backend-first web systems by deeply understanding execution,
+    networking, data flow, and runtime behavior — not by guesswork.
+  </p>
+
+  <div class="btn-group">
+    <a href="resume.pdf" target="_blank">Resume</a>
+    <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/malla-venkata-siva-rama-krishna-919518232" target="_blank">LinkedIn</a>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="animate">
+  <h2>About Me</h2>
+  <p>
+    I am a backend-heavy full-stack developer and execution-aware engineer with a foundation
+    in Mechanical Engineering. My academic and technical background trained me in systems
+    thinking, structured problem-solving, and disciplined debugging. I apply these skills
+    to building reliable backend services and clean, functional frontend interfaces by
+    understanding how software behaves at runtime.
+  </p>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="skills" class="animate">
+  <h2>Core Capabilities</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Backend & Execution (Primary)</h3>
+      <ul>
+        <li>Python & FastAPI backend development</li>
+        <li>REST API design & request lifecycle</li>
+        <li>C execution pipeline & compilation stages</li>
+        <li>Stack frames, memory & assembly reasoning</li>
+        <li>LLDB & PDB debugging</li>
+        <li>Python runtime & bytecode understanding</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Networking & Systems</h3>
+      <ul>
+        <li>HTTP request lifecycle (browser → server)</li>
+        <li>TCP fundamentals</li>
+        <li>SSH & port forwarding</li>
+        <li>Browser dev tools, curl & netcat</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Data & Persistence</h3>
+      <ul>
+        <li>SQLite & MySQL</li>
+        <li>SQL schema design & CRUD operations</li>
+        <li>SQLAlchemy ORM</li>
+        <li>Application ↔ database interaction</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Frontend & Engineering Practices</h3>
+      <ul>
+        <li>HTML, CSS & DOM manipulation</li>
+        <li>Dynamic page generation</li>
+        <li>Git & GitHub workflows</li>
+        <li>Remote Linux development (SSH)</li>
+        <li>Disciplined GenAI-assisted learning</li>
+        <li>Debugging by observation</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="animate">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Home Bites – Food Ordering System</h3>
+    <p>
+      Designed and developed an end-to-end backend system to digitalize a home-based
+      food business, handling orders from placement to delivery.
+    </p>
+    <ul>
+      <li>Built REST APIs using FastAPI</li>
+      <li>Managed complete order lifecycle</li>
+      <li>Implemented database models using SQLAlchemy</li>
+      <li>Validated requests with Pydantic and tested via Postman</li>
+    </ul>
+    🔗 <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA/home_bites" target="_blank">GitHub</a><br/>
+    🚀 Live Demo (Coming Soon)
   </div>
 
-  <!-- HERO -->
-  <header class="animate">
-    <img src="assets/rk.jpeg" alt="Rama Krishna" class="profile-pic"/>
-    <h1>Venkata Siva Rama Krishna Malla</h1>
+  <div class="project">
+    <h3>Student Profile Website Generator</h3>
     <p>
-      <strong>Backend-Heavy Full-Stack Developer</strong><br/>
-      Execution-Aware Engineer | Mechanical Engineering Graduate<br/><br/>
-      I design and build backend-first web systems by deeply understanding execution,
-      networking, data flow, and runtime behavior — not by guesswork.
+      Backend-driven Python automation system that generates and deploys individual
+      portfolio websites using structured CSV data and a reusable HTML template.
     </p>
+    <ul>
+      <li>Automated folder and HTML generation</li>
+      <li>Dynamic data injection using Python</li>
+      <li>Ensured scalability and consistent structure</li>
+    </ul>
+    🔗 <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA/profile_website" target="_blank">GitHub</a><br/>
+    🚀 <a href="https://aikaryashala.com/vidyardhi/AIK073361/" target="_blank">Live Website</a>
+  </div>
+</section>
 
-    <div class="btn-group">
-      <a href="resume.pdf" target="_blank">Resume</a>
-      <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/malla-venkata-siva-rama-krishna-919518232" target="_blank">LinkedIn</a>
-    </div>
-  </header>
+<!-- EDUCATION -->
+<section id="education" class="animate">
+  <h2>Education</h2>
+  <div class="education">
+    <strong>Bachelor of Technology – Mechanical Engineering</strong><br/>
+    GMR Institute of Technology
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="animate">
-    <h2>About Me</h2>
-    <p>
-      I am a backend-heavy full-stack developer trained in execution-aware engineering
-      practices. I focus on understanding how code runs at runtime, how systems interact,
-      and how data flows across services. My background in Mechanical Engineering built
-      strong foundations in system-level thinking, disciplined debugging, and structured
-      problem-solving — skills I now apply to backend and systems-focused software development.
-    </p>
-  </section>
+<!-- FOOTER -->
+<footer class="animate">
+  <p>
+    © 2026 Venkata Siva Rama Krishna Malla<br/>
+    <a href="mailto:2003ramakrishan@zohomail.in">2003ramakrishan@zohomail.in</a>
+  </p>
+</footer>
 
-  <!-- CAPABILITIES -->
-  <section class="animate">
-    <h2>Core Capabilities</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Backend & Execution</h3>
-        <ul>
-          <li>Python & FastAPI backend development</li>
-          <li>REST API design and lifecycle handling</li>
-          <li>Execution-level debugging (LLDB, PDB)</li>
-          <li>Understanding of runtime, stack & memory</li>
-        </ul>
-      </div>
+<!-- FIX INITIAL SCROLL + REVEAL -->
+<script>
+  // Force page to start at top after startup animation
+  window.addEventListener("load", () => {
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.body.style.overflow = "auto";
+    }, 3000);
+  });
 
-      <div class="card">
-        <h3>Networking & Systems</h3>
-        <ul>
-          <li>HTTP request flow (browser → server)</li>
-          <li>TCP fundamentals & port forwarding</li>
-          <li>SSH-based remote development</li>
-          <li>curl, netcat & browser dev tools</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Databases & Data</h3>
-        <ul>
-          <li>SQLite & MySQL using native REPLs</li>
-          <li>Schema design & SQL queries</li>
-          <li>SQLAlchemy ORM integration</li>
-          <li>Application ↔ database interaction</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Frontend & Tooling</h3>
-        <ul>
-          <li>HTML, CSS & DOM manipulation</li>
-          <li>Dynamic UI generation</li>
-          <li>Git & GitHub workflows</li>
-          <li>Disciplined GenAI-assisted learning</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="animate">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Home Bites – Food Ordering System</h3>
-      <ul>
-        <li>Backend-first system built using FastAPI</li>
-        <li>Complete order lifecycle management</li>
-        <li>Database schema using SQLAlchemy</li>
-        <li>Request validation with Pydantic</li>
-      </ul>
-      <p>
-        🔗 <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA/home_bites" target="_blank">GitHub Repository</a><br/>
-        🚀 Live Demo (Coming Soon)
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>Student Profile Website Generator</h3>
-      <ul>
-        <li>Python automation to generate portfolio websites</li>
-        <li>CSV-driven data injection into HTML templates</li>
-        <li>Scalable and consistent site generation</li>
-      </ul>
-      <p>
-        🔗 <a href="https://github.com/MALLAVENKATASIVARAMAKRISHNA/profile_website" target="_blank">GitHub Repository</a><br/>
-        🚀 <a href="https://aikaryashala.com/vidyardhi/AIK073361/" target="_blank">Live Website</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="animate">
-    <h2>Education</h2>
-    <div class="education">
-      <strong>Bachelor of Technology – Mechanical Engineering</strong><br/>
-      GMR Institute of Technology
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="animate">
-    <p>
-      © 2026 Venkata Siva Rama Krishna Malla<br/>
-      <a href="mailto:2003ramakrishan@zohomail.in">2003ramakrishan@zohomail.in</a>
-    </p>
-  </footer>
-
-  <!-- Scroll Reveal Script -->
-  <script>
-    const elements = document.querySelectorAll('.animate');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.15 });
-    elements.forEach(el => observer.observe(el));
-  </script>
+  // Scroll reveal
+  const items = document.querySelectorAll('.animate');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add('show'));
+  }, { threshold: 0.15 });
+  items.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
