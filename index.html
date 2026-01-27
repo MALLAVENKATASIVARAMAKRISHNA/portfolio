@@ -18,7 +18,7 @@
       line-height: 1.6;
     }
 
-    /* ===== Animation Base ===== */
+    /* ===== Animation ===== */
     .animate {
       opacity: 0;
       transform: translateY(30px);
@@ -34,29 +34,36 @@
     header {
       background: #0f172a;
       color: #ffffff;
-      padding: 80px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
     .profile-pic {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #ffffff;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
     }
 
     header p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 15px auto 30px;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      max-width: 850px;
+      margin: 14px auto 28px;
       color: #cbd5f5;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
 
     .btn-group a {
@@ -64,10 +71,8 @@
       color: #0f172a;
       background: #ffffff;
       padding: 10px 18px;
-      margin: 5px;
       border-radius: 6px;
       font-weight: bold;
-      display: inline-block;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -79,19 +84,19 @@
     /* ===== Sections ===== */
     section {
       max-width: 1000px;
-      margin: 70px auto;
+      margin: 60px auto;
       padding: 0 20px;
     }
 
     section h2 {
-      font-size: 1.8rem;
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
       margin-bottom: 20px;
       border-bottom: 3px solid #6366f1;
       display: inline-block;
       padding-bottom: 5px;
     }
 
-    /* ===== Cards ===== */
+    /* ===== Grid ===== */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -101,7 +106,7 @@
 
     .card {
       background: #ffffff;
-      padding: 20px;
+      padding: 18px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -115,19 +120,21 @@
     .card h3 {
       margin-top: 0;
       color: #4338ca;
+      font-size: 1.1rem;
     }
 
     ul {
       padding-left: 18px;
+      margin: 0;
     }
 
     /* ===== Projects ===== */
     .project {
       background: #ffffff;
-      padding: 20px;
+      padding: 18px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
@@ -140,12 +147,13 @@
       color: #4338ca;
       text-decoration: none;
       font-weight: bold;
+      word-break: break-word;
     }
 
     /* ===== Education ===== */
     .education {
       background: #ffffff;
-      padding: 20px;
+      padding: 18px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       max-width: 700px;
@@ -156,14 +164,31 @@
       background: #0f172a;
       color: #cbd5f5;
       text-align: center;
-      padding: 25px 15px;
-      margin-top: 60px;
+      padding: 22px 15px;
+      margin-top: 50px;
+      font-size: 0.9rem;
     }
 
     footer a {
       color: #ffffff;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    /* ===== Mobile Specific Tweaks ===== */
+    @media (max-width: 600px) {
+      section {
+        margin: 45px auto;
+      }
+
+      .profile-pic {
+        width: 115px;
+        height: 115px;
+      }
+
+      .card, .project, .education {
+        padding: 16px;
+      }
     }
   </style>
 </head>
@@ -214,16 +239,16 @@
       <div class="card">
         <h3>Networking & Systems</h3>
         <ul>
-          <li>HTTP & TCP fundamentals</li>
+          <li>HTTP & TCP</li>
           <li>SSH & port forwarding</li>
-          <li>Linux-based workflows</li>
+          <li>Linux workflows</li>
         </ul>
       </div>
       <div class="card">
         <h3>Data & Persistence</h3>
         <ul>
           <li>SQLite & MySQL</li>
-          <li>SQL & ORM modeling</li>
+          <li>SQL & ORM</li>
         </ul>
       </div>
       <div class="card">
@@ -284,7 +309,7 @@
     </p>
   </footer>
 
-  <!-- SCROLL REVEAL SCRIPT -->
+  <!-- Scroll Reveal -->
   <script>
     const animatedElements = document.querySelectorAll('.animate');
 
