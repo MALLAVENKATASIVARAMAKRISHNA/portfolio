@@ -5,14 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Venkata Siva Rama Krishna Malla | Portfolio</title>
 
-  <!-- SEO -->
   <meta name="description" content="Backend-heavy full-stack developer specializing in FastAPI, Python, and execution-aware systems."/>
-  <meta name="keywords" content="Backend Developer, FastAPI, Python Developer, Portfolio"/>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,6 +22,7 @@
       <a href="#skills">Capabilities</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
+      <button id="contactBtn" class="contact-btn">Contact</button>
     </div>
   </div>
 </nav>
@@ -174,6 +170,23 @@
     <a href="mailto:2003ramakrishan@zohomail.in">2003ramakrishan@zohomail.in</a>
   </p>
 </footer>
+
+<!-- CONTACT POPUP -->
+<div id="contactModal" class="contact-modal">
+  <div class="contact-box">
+    <span id="closeContact" class="close-btn">×</span>
+
+    <h3>Contact Me</h3>
+    <p><strong>📞 Phone:</strong> +91 9014763361</p>
+    <p>Scan to save contact</p>
+
+    <!-- ✅ QR UPDATED: Contact name = Rama Krishna Malla -->
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=BEGIN:VCARD%0AVERSION:3.0%0AN:Malla;Rama%20Krishna%0AFN:Rama%20Krishna%20Malla%0ATEL;TYPE=CELL:+919014763361%0AEMAIL:2003ramakrishan@zohomail.in%0AEND:VCARD"
+      alt="QR Contact"
+    />
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>
