@@ -5,181 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Venkata Siva Rama Krishna Malla | Portfolio</title>
 
-  <style>
-    * { box-sizing: border-box; }
+  <!-- SEO -->
+  <meta name="description" content="Backend-heavy full-stack developer specializing in FastAPI, Python, and execution-aware systems."/>
+  <meta name="keywords" content="Backend Developer, FastAPI, Python Developer, Portfolio"/>
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f5f7fb;
-      color: #1f2937;
-      line-height: 1.6;
-    }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    /* ===== NAVBAR ===== */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #0f172a;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    .nav-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      color: #ffffff;
-      font-weight: bold;
-    }
-
-    .nav-links a {
-      color: #cbd5f5;
-      text-decoration: none;
-      margin-left: 18px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a:hover { color: #ffffff; }
-
-    /* ===== STARTUP ANIMATION ===== */
-    #startup {
-      position: fixed;
-      inset: 0;
-      background: #0f172a;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      z-index: 9999;
-      animation: fadeOut 0.8s ease forwards;
-      animation-delay: 3s;
-    }
-
-    #startup div {
-      opacity: 0;
-      animation: fadeInUp 0.8s ease forwards;
-    }
-
-    #startup .role { font-size: 2rem; font-weight: bold; }
-    #startup .name { margin-top: 10px; font-size: 1.4rem; color: #e0e7ff; animation-delay: 0.4s; }
-    #startup .tagline { margin-top: 10px; color: #cbd5f5; animation-delay: 0.8s; }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeOut {
-      to { opacity: 0; visibility: hidden; }
-    }
-
-    /* ===== SCROLL REVEAL ===== */
-    .animate {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
-
-    .animate.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ===== HERO ===== */
-    header {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 140px 20px 80px;
-      text-align: center;
-    }
-
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 4px solid #ffffff;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.6rem;
-    }
-
-    header p {
-      max-width: 900px;
-      margin: 15px auto 30px;
-      color: #cbd5f5;
-    }
-
-    .btn-group a {
-      background: #ffffff;
-      color: #0f172a;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      margin: 5px;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    /* ===== SECTIONS ===== */
-    section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-      scroll-margin-top: 90px;
-    }
-
-    section h2 {
-      font-size: 1.9rem;
-      margin-bottom: 20px;
-      border-bottom: 3px solid #6366f1;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .card, .project, .education {
-      background: #ffffff;
-      padding: 22px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    ul { padding-left: 18px; }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #0f172a;
-      color: #cbd5f5;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -205,7 +39,7 @@
 </div>
 
 <!-- HERO -->
-<header class="animate">
+<header class="animate" id="home">
   <img src="assets/rk.jpeg" class="profile-pic" alt="Rama Krishna"/>
   <h1>Venkata Siva Rama Krishna Malla</h1>
   <p>
@@ -292,6 +126,7 @@
 
   <div class="project">
     <h3>Home Bites – Food Ordering System</h3>
+    <p><strong>Tech:</strong> FastAPI · Python · SQLAlchemy · SQLite · Postman</p>
     <p>
       Designed and developed an end-to-end backend system to digitalize a home-based
       food business, handling orders from placement to delivery.
@@ -308,6 +143,7 @@
 
   <div class="project">
     <h3>Student Profile Website Generator</h3>
+    <p><strong>Tech:</strong> Python · CSV · HTML · Automation · Static Hosting</p>
     <p>
       Backend-driven Python automation system that generates and deploys individual
       portfolio websites using structured CSV data and a reusable HTML template.
@@ -339,24 +175,6 @@
   </p>
 </footer>
 
-<!-- FIX INITIAL SCROLL + REVEAL -->
-<script>
-  // Force page to start at top after startup animation
-  window.addEventListener("load", () => {
-    document.body.style.overflow = "hidden";
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-      document.body.style.overflow = "auto";
-    }, 3000);
-  });
-
-  // Scroll reveal
-  const items = document.querySelectorAll('.animate');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => e.isIntersecting && e.target.classList.add('show'));
-  }, { threshold: 0.15 });
-  items.forEach(el => observer.observe(el));
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
