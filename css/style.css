@@ -244,3 +244,84 @@ footer a {
   opacity: 1;
   transform: translateY(0);
 }
+/* ================= MOBILE NAVBAR ================= */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #facc15;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: rgba(2,6,23,0.95);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    border-top: 1px solid #1f2933;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    margin: 12px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+/* ================= STARTUP MOBILE FIX ================= */
+
+#startup {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Default desktop spacing already fine */
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #startup {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #startup .role {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  #startup .name {
+    font-size: 1.1rem;
+  }
+
+  #startup .tagline {
+    font-size: 0.95rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  #startup .role {
+    font-size: 1.2rem;
+  }
+
+  #startup .name {
+    font-size: 1rem;
+  }
+
+  #startup .tagline {
+    font-size: 0.85rem;
+  }
+}

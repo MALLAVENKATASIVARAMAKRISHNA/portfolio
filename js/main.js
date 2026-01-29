@@ -33,3 +33,17 @@ contactModal.addEventListener("click", (e) => {
     contactModal.style.display = "none";
   }
 });
+// MOBILE NAV TOGGLE
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+// Close menu when link clicked
+navMenu.querySelectorAll("a, button").forEach(item => {
+  item.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+  });
+});
