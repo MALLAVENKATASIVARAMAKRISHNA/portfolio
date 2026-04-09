@@ -20,30 +20,34 @@ const contactBtn = document.getElementById("contactBtn");
 const contactModal = document.getElementById("contactModal");
 const closeContact = document.getElementById("closeContact");
 
-contactBtn.addEventListener("click", () => {
-  contactModal.style.display = "flex";
-});
+if (contactBtn && contactModal && closeContact) {
+  contactBtn.addEventListener("click", () => {
+    contactModal.style.display = "flex";
+  });
 
-closeContact.addEventListener("click", () => {
-  contactModal.style.display = "none";
-});
-
-contactModal.addEventListener("click", (e) => {
-  if (e.target === contactModal) {
+  closeContact.addEventListener("click", () => {
     contactModal.style.display = "none";
-  }
-});
+  });
+
+  contactModal.addEventListener("click", (e) => {
+    if (e.target === contactModal) {
+      contactModal.style.display = "none";
+    }
+  });
+}
 // MOBILE NAV TOGGLE
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
-
-// Close menu when link clicked
-navMenu.querySelectorAll("a, button").forEach(item => {
-  item.addEventListener("click", () => {
-    navMenu.classList.remove("show");
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
   });
-});
+
+  // Close menu when link clicked
+  navMenu.querySelectorAll("a, button").forEach(item => {
+    item.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+    });
+  });
+}
